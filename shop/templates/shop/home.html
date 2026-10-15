@@ -1,0 +1,91 @@
+
+{% extends 'shop/base.html' %}
+
+{% block title %}Apple Store | Shop Devices{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <p class="eyebrow">Discover the Apple collection</p>
+    <h1>Innovation.<br>In every detail.</h1>
+    <p>Explore iPhone, MacBook, iPad, Apple Watch and AirPods.</p>
+    <a href="#products" class="button">Shop now</a>
+</section>
+
+<section class="section" id="categories">
+    <h2>Shop by Category</h2>
+
+    <div class="category-grid">
+        {% for cat in categories %}
+            <a class="category-card"
+               href="{% url 'category_products' cat.id %}">
+
+                {% if cat.image %}
+                    <img src="{{ cat.image.url }}" alt="{{ cat.name }}">
+                {% endif %}
+
+                <h3>{{ cat.name }}</h3>
+            </a>
+        {% empty %}
+            <p>No categories yet. Add categories in Django Admin.</p>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="section" id="products">
+    <h2>Featured Products</h2>
+
+    <div class="product-grid">
+        {% for product in featured_products %}
+            <article class="product-card">
+                <a href="{% url 'product_detail' product.id %}">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}"
+                             alt="{{ product.name }}">
+                    {% endif %}
+                    <h3>{{ product.name }}</h3>
+                </a>
+
+                <p>₹{{ product.price }}</p>
+
+                {% if product.stock > 0 %}
+                    <span class="stock">In stock</span>
+                {% else %}
+                    <span class="out-stock">Out of stock</span>
+                {% endif %}
+
+                <a class="button"
+                   href="{% url 'product_detail' product.id %}">
+                    View product
+                </a>
+            </article>
+        {% empty %}
+            <p>Featured products will appear here.</p>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="section">
+    <h2>Explore all products</h2>
+
+    <div class="product-grid">
+        {% for product in products %}
+            <article class="product-card">
+                {% if product.image %}
+                    <img src="{{ product.image.url }}"
+                         alt="{{ product.name }}">
+                {% endif %}
+                <h3>{{ product.name }}</h3>
+                <p>₹{{ product.price }}</p>
+                <a class="button"
+                   href="{% url 'product_detail' product.id %}">
+                    View details
+                </a>
+            </article>
+        {% empty %}
+            <p>No products available yet.</p>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

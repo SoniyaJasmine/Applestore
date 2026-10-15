@@ -1,0 +1,24 @@
+
+{% extends 'shop/base.html' %}
+
+{% block content %}
+<section class="order-success">
+    <h1>Thank you for your order!</h1>
+    <p>Your order has been placed successfully.</p>
+
+    <h2>Order #{{ order.id }}</h2>
+    <p>Status: {{ order.status }}</p>
+    <p>Payment: {{ order.payment_method }}</p>
+    <h3>Total: ₹{{ order.total_amount|floatformat:2 }}</h3>
+
+    <h2>Items</h2>
+    {% for item in order.items.all %}
+        <p>
+            {{ item.product_name }} × {{ item.quantity }}
+            — ₹{{ item.price|floatformat:2 }}
+        </p>
+    {% endfor %}
+
+    <a href="{% url 'home' %}">Continue Shopping</a>
+</section>
+{% endblock %}

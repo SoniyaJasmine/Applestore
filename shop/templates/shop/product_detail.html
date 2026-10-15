@@ -1,0 +1,31 @@
+
+{% extends 'shop/base.html' %}
+
+{% block content %}
+<section class="product-detail">
+    <div class="product-image">
+        {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        {% else %}
+            <p>Image not available</p>
+        {% endif %}
+    </div>
+
+    <div class="product-info">
+        <h1>{{ product.name }}</h1>
+        <p>{{ product.description }}</p>
+
+        <h2>₹{{ product.price }}</h2>
+
+        {% if product.stock > 0 %}
+            <p class="stock">In Stock: {{ product.stock }}</p>
+            <form method="POST" action="{% url 'add_to_cart' product.id %}">
+                {% csrf_token %}
+                <button type="submit">Add to Cart</button>
+            </form>
+        {% else %}
+            <p>Out of Stock</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,62 @@
+
+{% extends 'shop/base.html' %}
+
+{% block content %}
+<section class="checkout-page">
+    <h1>Checkout</h1>
+
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+
+    <div class="checkout-layout">
+        <form method="POST" class="checkout-form">
+            {% csrf_token %}
+
+            <h2>Delivery Details</h2>
+
+            <label>Full Name</label>
+            <input type="text" name="customer_name" required>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" name="phone"
+                   pattern="[0-9]{10,15}" required>
+
+            <label>Address</label>
+            <textarea name="address" rows="3" required></textarea>
+
+            <label>City</label>
+            <input type="text" name="city" required>
+
+            <label>State</label>
+            <input type="text" name="state" required>
+
+            <label>Postal Code</label>
+            <input type="text" name="postal_code"
+                   pattern="[0-9]{6}" required>
+
+            <h2>Payment Method</h2>
+            <p>Cash on Delivery</p>
+
+            <button type="submit">Place Order</button>
+        </form>
+
+        <aside class="checkout-summary">
+            <h2>Order Summary</h2>
+
+            {% for item in cart_items %}
+                <div class="summary-item">
+                    <span>{{ item.product.name }} × {{ item.quantity }}</span>
+                    <span>₹{{ item.subtotal|floatformat:2 }}</span>
+                </div>
+            {% endfor %}
+
+            <hr>
+            <h3>Total: ₹{{ total|floatformat:2 }}</h3>
+        </aside>
+    </div>
+</section>
+{% endblock %}
