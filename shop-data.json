@@ -1,134 +1,134 @@
 [
-{
-  "model": "shop.category",
-  "pk": 1,
-  "fields": {
-    "name": "iPhone",
-    "image": ""
+  {
+    "model": "shop.category",
+    "pk": 1,
+    "fields": {
+      "name": "iPhone",
+      "image": ""
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 2,
+    "fields": {
+      "name": "Mac",
+      "image": ""
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 3,
+    "fields": {
+      "name": "iPad",
+      "image": ""
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 4,
+    "fields": {
+      "name": "Apple Watch",
+      "image": ""
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 5,
+    "fields": {
+      "name": "Air Pods",
+      "image": ""
+    }
+  },
+  {
+    "model": "shop.category",
+    "pk": 6,
+    "fields": {
+      "name": "Accessories",
+      "image": ""
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "iPhone 17 Pro",
+      "description": "Powerful performance with an advanced camera system.",
+      "price": "134900.00",
+      "image": "products/iPhone.jpeg",
+      "stock": 10,
+      "is_featured": true,
+      "created_at": "2026-10-15T07:53:13.190Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+      "category": 4,
+      "name": "Apple Watch Series 10",
+      "description": "A refined design and brings new capabilities to the worldâ€™s most popular watch.",
+      "price": "25000.00",
+      "image": "products/apple_watch.jpg",
+      "stock": 0,
+      "is_featured": true,
+      "created_at": "2026-10-15T08:10:23.599Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "name": "MacBook Neo",
+      "description": "With a durable design, beautiful colours and powerful features, itâ€™s a magical new way to fall head over heels with Mac, every day.",
+      "price": "79900.00",
+      "image": "products/macbook.webp",
+      "stock": 8,
+      "is_featured": true,
+      "created_at": "2026-10-15T08:12:02.208Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 4,
+    "fields": {
+      "category": 3,
+      "name": "iPad Pro",
+      "description": "The ultimate iPad experience with the most advanced technology.",
+      "price": "139900.00",
+      "image": "products/Apple_iPad_12.9_2022_Outdoor_4409.jpg",
+      "stock": 0,
+      "is_featured": true,
+      "created_at": "2026-10-15T08:14:28.413Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 5,
+    "fields": {
+      "category": 5,
+      "name": "AirPods Pro 3",
+      "description": "Apple AirPods Pro 3 Wireless Earbuds with Active Noise Cancellation",
+      "price": "5000.00",
+      "image": "products/airpods.jpeg",
+      "stock": 10,
+      "is_featured": true,
+      "created_at": "2026-10-15T08:17:48.427Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 6,
+    "fields": {
+      "category": 6,
+      "name": "Apple 35W Dual USB-C Port Compact Power Adapter",
+      "description": "Fast and Convenient Charging, Type C Wall Charger",
+      "price": "25000.00",
+      "image": "products/charger.jpg",
+      "stock": 4,
+      "is_featured": true,
+      "created_at": "2026-10-15T08:20:19.250Z"
+    }
   }
-},
-{
-  "model": "shop.category",
-  "pk": 2,
-  "fields": {
-    "name": "Mac",
-    "image": ""
-  }
-},
-{
-  "model": "shop.category",
-  "pk": 3,
-  "fields": {
-    "name": "iPad",
-    "image": ""
-  }
-},
-{
-  "model": "shop.category",
-  "pk": 4,
-  "fields": {
-    "name": "Apple Watch",
-    "image": ""
-  }
-},
-{
-  "model": "shop.category",
-  "pk": 5,
-  "fields": {
-    "name": "Air Pods",
-    "image": ""
-  }
-},
-{
-  "model": "shop.category",
-  "pk": 6,
-  "fields": {
-    "name": "Accessories",
-    "image": ""
-  }
-},
-{
-  "model": "shop.product",
-  "pk": 1,
-  "fields": {
-    "category": 1,
-    "name": "iPhone 17 Pro",
-    "description": "Powerful performance with an advanced camera system.",
-    "price": "134900.00",
-    "image": "products/iPhone.jpeg",
-    "stock": 10,
-    "is_featured": true,
-    "created_at": "2026-10-15T07:53:13.190Z"
-  }
-},
-{
-  "model": "shop.product",
-  "pk": 2,
-  "fields": {
-    "category": 4,
-    "name": "Apple Watch Series 10",
-    "description": "A refined design and brings new capabilities to the world’s most popular watch.",
-    "price": "25000.00",
-    "image": "products/apple_watch.jpg",
-    "stock": 0,
-    "is_featured": true,
-    "created_at": "2026-10-15T08:10:23.599Z"
-  }
-},
-{
-  "model": "shop.product",
-  "pk": 3,
-  "fields": {
-    "category": 2,
-    "name": "MacBook Neo",
-    "description": "With a durable design, beautiful colours and powerful features, it’s a magical new way to fall head over heels with Mac, every day.",
-    "price": "79900.00",
-    "image": "products/macbook.webp",
-    "stock": 8,
-    "is_featured": true,
-    "created_at": "2026-10-15T08:12:02.208Z"
-  }
-},
-{
-  "model": "shop.product",
-  "pk": 4,
-  "fields": {
-    "category": 3,
-    "name": "iPad Pro",
-    "description": "The ultimate iPad experience with the most advanced technology.",
-    "price": "139900.00",
-    "image": "products/Apple_iPad_12.9_2022_Outdoor_4409.jpg",
-    "stock": 0,
-    "is_featured": true,
-    "created_at": "2026-10-15T08:14:28.413Z"
-  }
-},
-{
-  "model": "shop.product",
-  "pk": 5,
-  "fields": {
-    "category": 5,
-    "name": "AirPods Pro 3",
-    "description": "Apple AirPods Pro 3 Wireless Earbuds with Active Noise Cancellation",
-    "price": "5000.00",
-    "image": "products/airpods.jpeg",
-    "stock": 10,
-    "is_featured": true,
-    "created_at": "2026-10-15T08:17:48.427Z"
-  }
-},
-{
-  "model": "shop.product",
-  "pk": 6,
-  "fields": {
-    "category": 6,
-    "name": "Apple 35W Dual USB-C Port Compact Power Adapter",
-    "description": "Fast and Convenient Charging, Type C Wall Charger",
-    "price": "25000.00",
-    "image": "products/charger.jpg",
-    "stock": 4,
-    "is_featured": true,
-    "created_at": "2026-10-15T08:20:19.250Z"
-  }
-}
 ]
